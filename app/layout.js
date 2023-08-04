@@ -12,10 +12,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav>
-          <a href="/">PUPSTER</a> |<a href="/">About</a> |
-          <a href="/discover/">Discover</a> |<a href="/search/">Search</a>
+        <nav class="bg-blue-500 py-4 px-8 text-white flex justify-between">
+          <a href="/" class="text-xl font-bold hover:text-blue-200">
+            PUPSTER
+          </a>
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="/" class="hover:text-blue-200">
+              About
+            </a>
+            <a href="/discover/" class="hover:text-blue-200">
+              Discover
+            </a>
+            <a href="/search/" class="hover:text-blue-200">
+              Search
+            </a>
+          </div>
         </nav>
+
         {children}
       </body>
     </html>
